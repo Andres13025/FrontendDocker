@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   loadData() {
-    this.http.get<WeatherData[]>('https://localhost:7068/WeatherForecast')
+    this.http.get<WeatherData[]>('http://localhost:8080/WeatherForecast')
     .pipe(
       catchError(error => {
         console.error('Error al obtener los datos del clima:', error);
